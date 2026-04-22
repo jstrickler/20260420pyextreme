@@ -36,13 +36,13 @@ class CardDeck:
         self._make_deck()
 
     def _make_deck(self):
-        self._cards = list()
+        self._cards = []
         for suit in self.SUITS:
             for rank in self.RANKS:
                 card = Card(rank, suit)
                 self._cards.append(card)
 
-    def draw(self) -> Card:
+    def draw(self) -> Card|None:
         """
         Retrieve next available card from deck.
 
@@ -54,6 +54,7 @@ class CardDeck:
             return self._cards.pop(0) #
         except IndexError:
             print("Sorry, no more cards")
+            return None
 
     def draw_n(self, n) -> CardList:
         """

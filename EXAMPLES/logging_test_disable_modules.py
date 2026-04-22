@@ -6,7 +6,7 @@ logging.basicConfig(
     filename="../LOGS/disabled.log",
 )
 
-logger = logging.getLogger()  # get root logger
+logger = logging.getLogger(__name__)  # get root logger
 
 logger.warning("in the main script")
 

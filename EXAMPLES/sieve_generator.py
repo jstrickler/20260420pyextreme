@@ -12,3 +12,18 @@ def next_prime(limit):
 np = next_prime(200)  # next_prime() returns a generator object
 for prime in np:  # iterate over yielded primes
     print(prime, end=' ')
+
+np = next_prime(8)
+print(next(np))
+print(next(np))
+print(next(np))
+print(next(np))
+# print(next(np))
+
+np = next_prime(200)
+
+primes = list(np)
+print(f"{primes = }")
+
+primes = list(np)
+print(f"{primes = }")

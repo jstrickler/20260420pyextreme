@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 
-@dataclass   # Dataclass decorator generates boilerplate code
+@dataclass  # Dataclass decorator generates boilerplate code
 class Person:  # Define normal class
     first_name: str  # Define fields with their types (can use typing module)
     last_name: str
     city: str
     state: str
+    age: int = 0
+    # mydata: list[str]
 
 
 if __name__ == '__main__':

@@ -10,10 +10,10 @@ print(list(cards), '\n')
 cards = [r + s for r, s in product(SUITS, RANKS)]  # reverse order and concatenate elements using list comprehension
 print(cards, '\n')
 
-giant = ['fee', 'fi', 'fo', 'fum']
+giant = ['fee', 'fi', 'fo', 'fum', 'spam', 'ham', 'eggs']
 
 result = combinations(giant, 2)  # all distinct combinations of 4 items taken 2 at a time
 print(list(result), "\n")
 
-result = permutations(giant, 2)  # all distinct permutations of 4 items taken 2 at a time
+result = permutations(giant)  # all distinct permutations of 4 items taken 2 at a time
 print(list(result), "\n")

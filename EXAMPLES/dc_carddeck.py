@@ -13,7 +13,7 @@ class Card:
     rank: str
     suit: str
 
-    def __repr__(self):
+    def __str__(self):
         return f"{self.rank}-{self.suit}"
 
 @dataclass
@@ -26,7 +26,7 @@ class CardDeck:
 
     cards: List[Card] = field(init=False, default_factory=list, repr=False)
 
-    dealer: str
+#    dealer: str
     _dealer: str = field(init=False, repr=False)
 
     def __post_init__(self):

@@ -10,9 +10,12 @@ fs1 = sorted(fruit, key=ignore_case)  # Specify function with named parameter ke
 print("Ignoring case:")
 print(f"fs1: {fs1}\n")
 
+fs1x = sorted(fruit, key=str.lower)
+print(f"{fs1x = }\n")
+
 
 def by_length_then_name(item):
-    return (len(item), item.lower())  # Key functions can return tuple of values to compare, in order
+    return len(item), item.lower() # Key functions can return tuple of values to compare, in order
 
 fs2 = sorted(fruit, key=by_length_then_name)
 print("By length, then name:")
@@ -27,3 +30,4 @@ print(f"n1: {n1}\n")
 n2 = sorted(nums, key=str)  # Sort numbers as strings
 print("Numbers sorted as strings:")
 print(f"n2: {n2}\n")
+

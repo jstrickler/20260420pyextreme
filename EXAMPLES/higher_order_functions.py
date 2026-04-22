@@ -1,3 +1,5 @@
+from operator import add
+
 fruits = ["pomegranate", "cherry", "apricot", "date", "apple",
           "lemon", "kiwi", "orange", "lime", "watermelon", "guava",
           "papaya", "fig", "pear", "banana", "tamarind", "persimmon",
@@ -20,3 +22,16 @@ print(f"f3: {f3}\n")
 
 total_length = sum(process_list(fruits, len))  # Pass the result of process_list() to the builtin function sum() to sum all the values in the returned list
 print(f"total_length: {total_length}")
+
+
+nums = [800, 80, 1000, 32, -3, 8, 18, 255, 400, 5, 5000]
+f4 = process_list(nums, lambda x: x + 1)
+print(f"{f4 = }\n")
+
+
+# lambda a, b: a + b
+
+result = add(5, 10)
+print(f"{result = }")
+
+

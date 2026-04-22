@@ -10,7 +10,8 @@ if sys.platform == 'win32':
     eventlog_handler = logging.handlers.NTEventLogHandler("Python Log Test")  # create NT event log handler
     logger.addHandler(eventlog_handler)  # install NT event handler
 else:
-    syslog_handler = logging.handlers.SysLogHandler()  # create syslog handler
+    syslog_handler = logging.handlers.SMTPHandler()
+    # create syslog handler
     logger.addHandler(syslog_handler)  # install syslog handler
 
 smtp_password = getpass("SMTP Password: ")

@@ -5,8 +5,8 @@ from functools import partial
 
 count_by = partial(range, 0, 25)  # create partial function that "preloads" range() with arguments 0 and 25
 
-print((list(count_by(1))))  # call partial function with parameter, 0 and 25 automatically passed in
-print((list(count_by(3))))  # call partial function with parameter, 0 and 25 automatically passed in
+print((list(count_by(1))))  #  range(0, 25, 1) call partial function with parameter, 0 and 25 automatically passed in
+print((list(count_by(3))))  #  range(0, 25, 3) call partial function with parameter, 0 and 25 automatically passed in
 print((list(count_by(5))))  # call partial function with parameter, 0 and 25 automatically passed in
 print()
 

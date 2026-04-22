@@ -4,6 +4,7 @@ from itertools import chain, takewhile, dropwhile
 spam = ['alpha', 'beta', 'gamma']
 ham = ['delta', 'epsilon', 'zeta']
 
+# for letter in spam + ham
 for letter in chain(spam, ham):  # treat spam and ham as a single iterable
     print(letter, end=' ')
 print("\n")

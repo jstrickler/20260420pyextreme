@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# the above is always required
+
+[project]
+name = "weasels"
+version = "1.0.0"
+authors = [
+    { name="John Strickler", email="jstrickler@gmail.com" },
+]
+description = "All about your furry friends with big teeth"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+#    'roman >= 3.0',
+]
+
+
+[project.scripts]
+#  script_name: script_function_name
+show_weasels='weasels:_cli_script'
+
+
+

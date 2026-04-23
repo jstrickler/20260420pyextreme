@@ -18,6 +18,7 @@ n1 = NewClass()  # create instance of new class
 n1.hello1()  # call instance method
 n1.hello2()
 print(n1.color)  # access class data
+print(NewClass.color)
 print()
 
 SubClass = type("SubClass", (NewClass,), {'fruit': 'banana'})  # create subclass of first class
@@ -25,3 +26,4 @@ s1 = SubClass()  # create instance of subclass
 s1.hello1()  # call method on subclass
 print(s1.color)  # access class data
 print(s1.fruit)
+print(s1.state)

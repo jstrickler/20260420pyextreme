@@ -20,3 +20,5 @@ if __name__ == '__main__':
     print(mc())  # can call at any time to get current memory use
     big_list = [0] * 10_000_000
     print(mc())
+    del big_list
+    print(mc())

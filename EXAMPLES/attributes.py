@@ -22,7 +22,7 @@ setattr(Spam, 'eggs', toast)  # set (or overwrite) attribute
 
 s.eggs("buttered!")
 
-delattr(Spam, 'eggs')  # remove attribute
+delattr(s, 'eggs')  # remove attribute
 
 try:
     s.eggs("shirred")

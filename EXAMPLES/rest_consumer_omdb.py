@@ -7,9 +7,9 @@ with open('omdbapikey.txt') as api_in:
 OMDB_URL = "http://www.omdbapi.com"
 
 def main():
-    requests_params = {'t': 'Black Panther', "apikey": OMDB_API_KEY}
+    requests_params = {'t': 'Sinners', "apikey": OMDB_API_KEY}
     response = requests.get(OMDB_URL, params=requests_params)
-    if response.status_code == requests.codes.OK:
+    if response.ok:  # status_code == requests.codes.OK:  # 200
         raw_data = response.json()
 
         print(f"raw_data['Title']: {raw_data['Title']}")
@@ -21,7 +21,8 @@ def main():
         print('-' * 60)
 
         print("raw DATA:")
-        pprint(response.json())
+        pprint(response.json(), width=50, sort_dicts=False, depth=1)
+#        print(response.content.decode())
     else:
         print(f"response.status_code: {response.status_code}")
 

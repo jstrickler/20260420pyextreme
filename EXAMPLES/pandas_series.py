@@ -35,6 +35,7 @@ s3 = s1 * 10  # create new series with every element of s1 multiplied by 10
 print("s3 (which is s1 * 10)")
 print(s3, "\n")
 
+x = s1['e'] * 5
 s1['e'] *= 5
 
 print("boolean mask where s3 > 0:")

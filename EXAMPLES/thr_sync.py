@@ -1,12 +1,11 @@
-from functools import partial
 from threading import Thread, Event, Lock
 import time
 
-a_ready = Event()
-stdout_lock = Lock()
+A_READY = Event()
+STDOUT_LOCK = Lock()
 
 def pr(*args):
-    with stdout_lock:
+    with STDOUT_LOCK:
         print(*args, end='', flush=True)
 
 def divisible_by_n(value, n):
@@ -22,21 +21,21 @@ class ThreadA(Thread):
         for i in range(1, 50):
             pr(f"A{i}")
             if divisible_by_n(i, 10):
-                a_ready.set()  # notify b
+                A_READY.set()  # notify b
                 pr("/setting/")
             elif divisible_by_n(i, 5):
-                a_ready.clear()  # stop notifying b
+                A_READY.clear()  # stop notifying b
                 pr("/clearing/")
             time.sleep(.1)
         pr("/setting/")
-        a_ready.set()  # notify b and let b finish
+        A_READY.set()  # notify b and let b finish
 
 
 class ThreadB(Thread):
 
     def run(self):
         for i in range(1, 50):
-            a_ready.wait()  # wait until event is set by ThreadA
+            A_READY.wait()  # wait until event is set by ThreadA
             pr(f"B{i}")
             time.sleep(.1)
 

@@ -21,7 +21,7 @@ print_header("After dropping beta and delta:")
 print(df2, '\n')
 
 print_header("After dropping rows b, c, and e")
-df3 = df.drop(['b', 'c', 'e'])  # drop rows b, c, and e
+df3 = df.drop(['b', 'c', 'e'], axis=0)  # drop rows b, c, and e
 print(df3)
 
 print_header(" In-place drop")

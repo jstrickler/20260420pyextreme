@@ -29,3 +29,6 @@ except TypeError as err:
     print(err)
 else:
     d.speak()
+
+
+# class Foo(metaclass=type)

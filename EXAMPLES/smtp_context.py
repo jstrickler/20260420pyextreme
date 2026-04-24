@@ -1,5 +1,5 @@
 import smtplib  # create context-aware class
-import getpass
+from getpass import getpass
 
 SMTP_HOST = 'smtp2go.com'
 SMTP_PORT = 2525

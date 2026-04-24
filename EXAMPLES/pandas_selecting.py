@@ -17,10 +17,10 @@ df = pd.DataFrame(values, index=index, columns=columns)  # create dataframe with
 print_header('DataFrame df')
 print(df, '\n')
 
-print_header("df['alpha']")
+print_header("df['alpha']")   # df['column-name'] returns column
 print(df['alpha'], '\n')  # select column 'alpha' -- single value selects column by name
 
-print_header("df.beta")
+print_header("df.beta")  # same as df['beta']
 print(df.beta, '\n')  # same, but alternate syntax (only works if column name is letters, digits, and underscores)
 
 print_header("df[['alpha','epsilon','beta']]")
